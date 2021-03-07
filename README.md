@@ -88,8 +88,10 @@ grant all privileges on database miningcore to miningcore;
 Import the database schema:
 
 ```console
+$ sudo -u postgres -i
 $ wget https://raw.githubusercontent.com/coinfoundry/miningcore/master/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql
 $ psql -d miningcore -U miningcore -f createdb.sql
+$ \q  <-- to quit psql
 ```
 
 ### Advanced PostgreSQL Database setup
@@ -99,8 +101,8 @@ If you are planning to run a Multipool-Cluster, the simple setup might not perfo
 **WARNING**: The following step will delete all recorded shares. Do **NOT** do this on a production pool unless you backup your <code>shares</code> table using <code>pg_backup</code> first!
 
 ```console
-$ wget https://raw.githubusercontent.com/coinfoundry/miningcore/master/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql
-$ psql -d miningcore -U miningcore -f createdb_postgresql_11_appendix.sql
+$ wget https://raw.githubusercontent.com/oneitguy/miningcore/master/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql
+$ psql -d miningcore -f createdb_postgresql_11_appendix.sql
 ```
 
 After executing the command, your <code>shares</code> table is now a [list-partitioned table](https://www.postgresql.org/docs/11/ddl-partitioning.html) which dramatically improves query performance, since almost all database operations Miningcore performs are scoped to a certain pool. 
