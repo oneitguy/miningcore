@@ -1,3 +1,6 @@
+![miningcore](https://github.com/oneitguy/miningcore/blob/master/miningcore.png)
+
+
 ### Features
 
 - Supports clusters of pools each running individual currencies
