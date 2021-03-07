@@ -73,6 +73,7 @@ $ sudo apt-get install postgresql postgresql-contrib
 Create the database:
 
 ```console
+$ sudo -u postgres -i
 $ createuser miningcore
 $ createdb miningcore
 $ psql (enter the password for postgres)
@@ -88,10 +89,8 @@ grant all privileges on database miningcore to miningcore;
 Import the database schema:
 
 ```console
-$ sudo -u postgres -i
 $ wget https://raw.githubusercontent.com/coinfoundry/miningcore/master/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql
 $ psql -d miningcore -U miningcore -f createdb.sql
-$ \q  <-- to quit psql
 ```
 
 ### Advanced PostgreSQL Database setup
