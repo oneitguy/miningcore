@@ -1,9 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/nbvaa55gu3icd1q8?svg=true)](https://ci.appveyor.com/project/oliverw/miningcore)
-[![Docker Build Statu](https://img.shields.io/docker/build/coinfoundry/miningcore-docker.svg)](https://hub.docker.com/r/coinfoundry/miningcore-docker/)
-[![Docker Stars](https://img.shields.io/docker/stars/coinfoundry/miningcore-docker.svg)](https://hub.docker.com/r/coinfoundry/miningcore-docker/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/coinfoundry/miningcore-docker.svg)]()
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-
 ### Features
 
 - Supports clusters of pools each running individual currencies
@@ -133,7 +127,7 @@ $ sudo apt-get update -y
 $ sudo apt-get install apt-transport-https -y
 $ sudo apt-get update -y
 $ sudo apt-get -y install dotnet-sdk-2.2 git cmake build-essential libssl-dev pkg-config libboost-all-dev libsodium-dev libzmq5
-$ git clone https://github.com/coinfoundry/miningcore
+$ git clone https://github.com/oneitguy/miningcore
 $ cd miningcore/src/Miningcore
 $ dotnet publish -c Release --framework netcoreapp2.2  -o ../../build
 ```
@@ -143,7 +137,7 @@ $ dotnet publish -c Release --framework netcoreapp2.2  -o ../../build
 Download and install the [.Net Core 2.2 SDK](https://www.microsoft.com/net/download/core)
 
 ```dosbatch
-> git clone https://github.com/coinfoundry/miningcore
+> git clone https://github.com/oneitguy/miningcore
 > cd miningcore/src/Miningcore
 > dotnet publish -c Release --framework netcoreapp2.2  -o ..\..\build
 ```
@@ -166,4 +160,4 @@ dotnet Miningcore.dll -c config.json
 
 ## Running a production pool
 
-A public production pool requires a web-frontend for your users to check their hashrate, earnings etc. Miningcore does not include such frontend but there are several community projects that can be used as starting point. Feel free to discuss ideas/issues with fellow pool operators using our [Gitter Channel](https://gitter.im/miningcore/Lobby).
+
